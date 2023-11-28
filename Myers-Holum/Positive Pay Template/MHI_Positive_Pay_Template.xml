@@ -1,0 +1,19 @@
+<#-- format specific processing -->
+<#assign refmap = (pfa. custrecord_2663_tran_rec_detail)?eval />
+<#assign tramap = (pfa. custrecord_2663_trailer_rec_detail)?eval />
+<#-- template building -->
+
+#OUTPUT START#
+*0300808${cbank.custpage_pp_custrecord_2663_acct_num?left_pad(15,"0")}0
+<#list refmap as key,value>
+<#assign bank_acc = key>
+<#list value as v>
+${v["cs"]?left_pad(10, "0")}${setLength(v["id"]?date?string("MM"),2)}${setLength(v["id"]?date?string("dd"),2)}${setLength(v["id"]?date?string("YY"),2)}${key?left_pad(15, "0")}${v["tc"]}${v["am"]?left_pad(10, "0")}${setLength(v["en"],121)}
+</#list>
+<#list tramap as a,b>
+<#if a == bank_acc>
+&${setLength(" ",14)}${b["ct"]?left_pad(7,"0")}${setLength(" ",3)}${b["tm"]?left_pad(13,"0")}${setLength(" ",47)}
+</#if>
+</#list>
+</#list>
+#OUTPUT END#
