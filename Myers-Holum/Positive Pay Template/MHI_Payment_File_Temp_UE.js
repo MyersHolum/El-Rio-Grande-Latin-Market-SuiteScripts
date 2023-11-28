@@ -10,14 +10,12 @@
   */
  function(record, search) {
   function beforeSubmit(context) {
+    if (context.type == 'delete' || context.type == 'xedit') return;
     const pfaRec = context.newRecord;
     const pfaRecId = pfaRec.id;
     const oldRec = context.oldRecord;
-    let oldStatus = '';
-    if (context.type != 'create') {
-      oldStatus = oldRec.getValue('custrecord_2663_file_processed');
-    }
-    var newStatus = pfaRec.getValue({
+    const oldStatus = context.type != 'create' ? oldRec.getValue('custrecord_2663_file_processed') : '';
+    const newStatus = pfaRec.getValue({
       fieldId: 'custrecord_2663_file_processed'
     });
     const MARKED_TRAN = 15;
@@ -48,6 +46,8 @@
   
   function getObjDetails(results, bankDetailObj) {
     let tranCode = '';
+    const tranCancel = 320;
+    const tranVoid = 430 
     let refmap = {};
     let tranmap = {};
     for (let i = 0; i < results.length; i += 1) {
@@ -97,9 +97,9 @@
         tranAmt = tranAmt * -1;
       }
       if (status == 'Voided') {
-        tranCode = 430;
+        tranCode = tranVoid;
       } else {
-        tranCode = 320;
+        tranCode = tranCancel
       }
       var currentBillData = {
         'cs': checkIssue,

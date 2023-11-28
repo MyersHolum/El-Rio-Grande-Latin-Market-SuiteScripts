@@ -16,149 +16,109 @@ define(['N/currentRecord', 'N/log', 'N/error', 'N/runtime', 'N/search'], functio
       const lineCountItem = rec.getLineCount ({
         sublistId: LINESUBLIST
       });
-      if (lineCountItem > 0) {
-        processDeptClassCheck(rec, LINESUBLIST, lineCountItem);
-      }
+      if (lineCountItem > 0) processDeptClassCheck(rec, LINESUBLIST, lineCountItem);
     } else if (recType == 'cashsale') {
       const lineCountItem = rec.getLineCount ({
         sublistId: ITEMSUBLIST
       });
-      if (lineCountItem > 0) {
-        processDeptClassCheck(rec, ITEMSUBLIST, lineCountItem);
-      }
+      if (lineCountItem > 0) processDeptClassCheck(rec, ITEMSUBLIST, lineCountItem);
     } else if (recType == 'check') {
       const lineItem = rec.getLineCount ({
         sublistId: ITEMSUBLIST
       });
-      if (lineItem > 0) {
-        processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
-      }
+      if (lineItem > 0) processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
       const lineExpense = rec.getLineCount ({
         sublistId: EXPSUBLIST
       });
-      if (lineExpense > 0) {
-        processDeptClassCheck(rec, EXPSUBLIST, lineExpense);
-      }
+      if (lineExpense > 0) processDeptClassCheck(rec, EXPSUBLIST, lineExpense);
 
     } else if (recType == 'creditmemo') {
       const lineItem = rec.getLineCount ({
         sublistId: ITEMSUBLIST
       });
-      if (lineItem > 0) {
-        processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
-      }
+      if (lineItem > 0) processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
 
     } else if (recType == 'estimate') {
       const lineItem = rec.getLineCount ({
         sublistId: ITEMSUBLIST
       });
-      if (lineItem > 0) {
-        processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
-      }
+      if (lineItem > 0) processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
 
     } else if (recType == 'inventoryadjustment') {
       const lineItem = rec.getLineCount ({
         sublistId: 'inventory'
       });
-      if (lineItem > 0) {
-        processDeptClassCheck(rec, 'inventory', lineItem);
-      }
+      if (lineItem > 0) processDeptClassCheck(rec, 'inventory', lineItem);
 
     }else if (recType == 'invoice') {
       const lineItem = rec.getLineCount ({
         sublistId: ITEMSUBLIST
       });
-      if (lineItem > 0) {
-        processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
-      }
+      if (lineItem > 0) processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
 
     } else if (recType == 'journalentry') {
       const lineCountItem = rec.getLineCount ({
         sublistId: LINESUBLIST
       });
-      if (lineCountItem > 0) {
-        processDeptClassCheck(rec, LINESUBLIST, lineCountItem);
-      }
+      if (lineCountItem > 0) processDeptClassCheck(rec, LINESUBLIST, lineCountItem);
 
     } else if (recType == 'purchaseorder') {
       const lineItem = rec.getLineCount ({
         sublistId: ITEMSUBLIST
       });
-      if (lineItem > 0) {
-        processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
-      }
+      if (lineItem > 0) processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
       const lineExpense = rec.getLineCount ({
         sublistId: EXPSUBLIST
       });
-      if (lineExpense > 0) {
-        processDeptClassCheck(rec, EXPSUBLIST, lineExpense);
-      }
+      if (lineExpense > 0) processDeptClassCheck(rec, EXPSUBLIST, lineExpense);
 
     } else if (recType == 'vendorreturnauthorization') {
       const lineItem = rec.getLineCount ({
         sublistId: ITEMSUBLIST
       });
-      if (lineItem > 0) {
-        processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
-      }
+      if (lineItem > 0) processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
       const lineExpense = rec.getLineCount ({
         sublistId: EXPSUBLIST
       });
-      if (lineExpense > 0) {
-        processDeptClassCheck(rec, EXPSUBLIST, lineExpense);
-      }
+      if (lineExpense > 0) processDeptClassCheck(rec, EXPSUBLIST, lineExpense);
 
     } else if (recType == 'salesorder') {
       const lineItem = rec.getLineCount ({
         sublistId: ITEMSUBLIST
       });
-      if (lineItem > 0) {
-        processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
-      }
+      if (lineItem > 0) processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
 
     } else if (recType == 'statisticaljournalentry') {
       const lineCountItem = rec.getLineCount ({
         sublistId: LINESUBLIST
       });
-      if (lineCountItem > 0) {
-        processDeptClassCheck(rec, LINESUBLIST, lineCountItem);
-      }
+      if (lineCountItem > 0) processDeptClassCheck(rec, LINESUBLIST, lineCountItem);
 
     } else if (recType == 'transferorder') {
       const lineItem = rec.getLineCount ({
         sublistId: ITEMSUBLIST
       });
-      if (lineItem > 0) {
-        processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
-      }
+      if (lineItem > 0) processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
 
     } else if (recType == 'vendorbill') {
       const lineItem = rec.getLineCount ({
         sublistId: ITEMSUBLIST
       });
-      if (lineItem > 0) {
-        processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
-      }
+      if (lineItem > 0) processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
       const lineExpense = rec.getLineCount ({
         sublistId: EXPSUBLIST
       });
-      if (lineExpense > 0) {
-        processDeptClassCheck(rec, EXPSUBLIST, lineExpense);
-      }
+      if (lineExpense > 0) processDeptClassCheck(rec, EXPSUBLIST, lineExpense);
 
     } else if (recType == 'vendorcredit') {
       const lineItem = rec.getLineCount ({
         sublistId: ITEMSUBLIST
       });
-      if (lineItem > 0) {
-        processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
-      }
+      if (lineItem > 0) processDeptClassCheck(rec, ITEMSUBLIST, lineItem);
       const lineExpense = rec.getLineCount ({
         sublistId: EXPSUBLIST
       });
-      if (lineExpense > 0) {
-        processDeptClassCheck(rec, EXPSUBLIST, lineExpense);
-      }
+      if (lineExpense > 0) processDeptClassCheck(rec, EXPSUBLIST, lineExpense);
 
     }
   }

@@ -8,7 +8,7 @@
 <#list refmap as key,value>
 <#assign bank_acc = key>
 <#list value as v>
-${v["cs"]?left_pad(10, "0")}${setLength(v["id"]?date?string("MM"),2)}${setLength(v["id"]?date?string("dd"),2)}${setLength(v["id"]?date?string("YY"),2)}${key?left_pad(15, "0")}${v["tc"]}${v["am"]?left_pad(10, "0")}${setLength(v["en"],121)}
+${v["cs"]?left_pad(10, "0")}${setLength(v["id"]?date?string("MM"),2)}${setLength(v["id"]?date?string("dd"),2)}${setLength(v["id"]?date?string("YY"),2)}${cbank.custpage_pp_custrecord_2663_acct_num?left_pad(15, "0")}${v["tc"]}${v["am"]?left_pad(10, "0")}${setLength(v["en"],121)}
 </#list>
 <#list tramap as a,b>
 <#if a == bank_acc>
