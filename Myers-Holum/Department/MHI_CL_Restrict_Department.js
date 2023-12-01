@@ -46,7 +46,7 @@ define(['N/currentRecord', 'N/record', 'N/search'], function(currentRecord, reco
     } else if (recType == 'invoice' && context.fieldId == 'department') {
       validateDept(rec, sublistName);
 
-    }else if (recType == 'journalentry' && context.fieldId == 'department') {
+    } else if (recType == 'journalentry' && context.fieldId == 'department') {
       validateDept(rec, sublistName);
 
     } else if (recType == 'purchaseorder' && context.fieldId == 'department') {
@@ -64,10 +64,10 @@ define(['N/currentRecord', 'N/record', 'N/search'], function(currentRecord, reco
     } else if (recType == 'transferorder' && context.fieldId == 'department') {
       validateDept(rec, sublistName);
 
-    }else if (recType == 'vendorbill' && context.fieldId == 'department') {
+    } else if (recType == 'vendorbill' && context.fieldId == 'department') {
       validateDept(rec, sublistName);
 
-    }else if (recType == 'vendorcredit' && context.fieldId == 'department') {
+    } else if (recType == 'vendorcredit' && context.fieldId == 'department') {
       validateDept(rec, sublistName);
 
     }
